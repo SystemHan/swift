@@ -1093,7 +1093,7 @@ public class ThriftCodecByteCodeGenerator<T>
 
     private ParameterizedType toCodecType(ThriftStructMetadata metadata)
     {
-        return type(PACKAGE + "/" + type(metadata.getStructClass()).getClassName() + "Codec");
+        return type(PACKAGE + "/" + type(metadata.getStructType().getTypeName().replaceAll("\\.", "/")).getClassName() + "Codec");
     }
 
     private static class ConstructorParameters

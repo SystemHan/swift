@@ -188,7 +188,7 @@ public class ThriftType
         Preconditions.checkNotNull(structMetadata, "structMetadata is null");
 
         this.protocolType = STRUCT;
-        this.javaType = structMetadata.getStructClass();
+        this.javaType = structMetadata.getStructType();
         keyTypeReference = null;
         valueTypeReference = null;
         this.structMetadata = structMetadata;
